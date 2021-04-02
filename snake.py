@@ -129,6 +129,7 @@ class Snake(Individual):
     
     def calculate_fitness(self):
         # Give positive minimum fitness for roulette wheel selection
+		# Number of frames that the snake has been alive + 2^(apples eaten) - ((0.25 * frames that the snake has been alive)^1.3)*(frames that the snake has been alive for ^1.2)
         self._fitness = (self._frames) + ((2**self.score) + (self.score**2.1)*500) - (((.25 * self._frames)**1.3) * (self.score**1.2))
         # self._fitness = (self._frames) + ((2**self.score) + (self.score**2.1)*500) - (((.25 * self._frames)) * (self.score))
         self._fitness = max(self._fitness, .1)
