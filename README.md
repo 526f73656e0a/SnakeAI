@@ -1,4 +1,4 @@
-# Snake AI
+# Snake AI 
 # Current Version 1.0
 ## Licensed under MIT license - so you can use this however you please :)
 ## Dependencies
@@ -23,3 +23,5 @@ To install dependencies, run `pip3 install -r requirements.txt`
 Let's say you have a 50 generations of snakes saved and you want to create a new population with the last 10 generations. You could start a new instance of `snake_app.py` and modify `for _ in range(self.settings['num_parents']):` portion to generate 10 less snakes. Then you can load your 10 best snakes and insert them into the population. This is where you can choose to either modify the constructor of your snake to have a different `apple_seed` or allow the snake to run it's previous course. The choice is up to you and totally dependent on your goals!
 
 If the ability to load snakes is something you want to have an easier time with let me know and I can work on that.
+# Personal Additions: 
+The ability to save and load top fitness individual each generation, for later examination and or evaluation of top socring individual. 
